@@ -17,3 +17,13 @@ if(pago == 'efectivo') {
 } else {
     document.write('Tu pago ha sido rechazado');
 }
+
+// Desafio 3
+
+for (let i = 1; i <= 5; i += 1 )  {
+    // En cada repetición solicitamos un nombre.
+    let ingresarNombre = prompt("Ingresar nombre");
+    // Informamos el turno asignado usando el número de repetición (i).
+    document.write( " Turno  N° "+i+" Nombre: "+ingresarNombre);
+}
+
