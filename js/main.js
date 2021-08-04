@@ -1,29 +1,34 @@
- // Desafio 1
-let nombre = prompt ("Ingrese su nombre completo")
-let edad = parseInt(prompt ("Ingrese su edad"))
+// //  // Desafio 1
+let nombre = prompt("Ingrese su nombre completo")
+let edad = parseInt(prompt("Ingrese su edad"))
 
-alert( "Bienvenido" + " " + nombre)
+alert("Bienvenido" + " " + nombre)
 
-document.write( nombre + " es momento de que aprendas nuevas herramientas </br>");
+alert(nombre + " es momento de que aprendas nuevas herramientas");
 
 // Desafio 2
 
-let pago = prompt("Como prefieres abonar?");
+const pago = prompt("Como prefieres abonar?").toLowerCase();
 
-if(pago == 'efectivo') {
-    document.write('Tu pago en efectivo se ha realizado con exito');
-} else if( pago == 'tarjeta' ) {
-    document.write('Tu pago en tarjeta se ha realizado con exito');
-} else {
-    document.write('Tu pago ha sido rechazado');
+switch (pago) {
+    case "efectivo":
+        document.write(`Pagaste con ${pago}`);
+        break;
+    case "tarjeta":
+        document.write(`Pagaste con ${pago}`);
+        break;
+    case "mercadopago":
+        document.write(`Pagaste con ${pago}`);
+        break;
+    default:
+        document.write("Tu pago fue rechazado");
+        break;
 }
 
-// Desafio 3
+// Desafio 3 - While
 
-for (let i = 1; i <= 5; i += 1 )  {
-    // En cada repetición solicitamos un nombre.
-    let ingresarNombre = prompt("Ingresar nombre");
-    // Informamos el turno asignado usando el número de repetición (i).
-    document.write( " Turno  N° "+i+" Nombre: "+ingresarNombre);
+let entrada = prompt("Dime tres cualidades tuyas . Sos una persona...");
+while (entrada != "SALIR") {
+    document.write(`<p>Sos una persona ${entrada} </p>`);
+    entrada = prompt("Cuando me hayas contado 3 decime SALIR");
 }
-
