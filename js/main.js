@@ -1,10 +1,16 @@
+//Saludamos al usuario
+
 function saludar () {
   let saludo;
   saludo = prompt ("Bienvenido a Napolitino, ¿Como te llamas?") ; 
-  if (saludo== "") {alert ("No nos dijiste tu nombre");}
+  if (saludo== "") {alert ("No nos dijiste tu nombre");
+}
 }
 
 saludar()
+
+
+//declaramos objeto
 
 class Box {
   constructor(name, price, available, description = true) {
@@ -16,6 +22,7 @@ class Box {
 }
 
 // cargar productos
+
 const boxes = [
   new Box('Boconna Box', 600,true,`Boconccinos y tomates secos`),
   new Box('Blue Box', 800,true,`Queso azul y cebolla caramelizada`),
@@ -25,12 +32,13 @@ const boxes = [
   new Box('Serrana', 300,true,`Jamon crudo y tomates hidratados`)
 ];
 
-// mostrar productos
+// mostrar productos al final del sitio
+
 document.write(`
   <ul>
     ${boxes.map((Box) => {
       return `
-        <li class=text-center>
+        <li>
           <strong class="card-title">${Box.name}</strong>
           <ul class="card-text">
             <li>Precio: ${Box.price}</li>
@@ -53,23 +61,24 @@ function initBuy() {
   if (BoxFound) {
     document.write(`Usted eligió: ${BoxFound.name}. El precio es de ${[BoxFound.price]} mas el costo de envio`);
   } else {
-    document.write(`No encontramos ese producto.`);
+    document.write(`No encontramos ese producto o no lo escribiste bien`);
   }
 }
 
+//preguntar la zona de envio del usuario y devolver el costo del mismo
+
 function envio () {
-let lugar = prompt ('Donde enviamos tu box? (Palermo,Boedo o Caballito)');
-  if (lugar == "") { alert (`Ingresa tu barrio`);}
+let lugar = (prompt('Donde que zona sos ? (Solo enviamos a Palermo,Boedo o Caballito)')).toLowerCase();
+  if (lugar == "") { alert (`Ingresa tu barrio para conocer tu costo de envio`);}
   switch (lugar){
-    case "Palermo":  return 200;
+    case "palermo":  return 200;
     break
-    case "Boedo": return 0;
+    case "boedo": return 0;
     break
-    case "Caballito": return 100;
+    case "caballito": return 100;
     break
-    default: alert (`No llegamos a esa zona o escribiste mal el nombre`)
+    default: alert (`No llegamos a esa zona`)
     break;
   }
 }
-
 alert (`El envio a esa zona te sale ${envio()} pesos. Al final de la web podes hacer tu pedido`)
