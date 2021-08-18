@@ -1,0 +1,253 @@
+// variables
+$padding: 5rem;
+// mapa
+$tamanios:(
+    h2: 5rem,
+    p: 1.75rem,
+    nav: 2rem,
+);
+
+$h2:map-get($tamanios, h2);
+$p:map-get($tamanios , p );
+$nav:map-get($tamanios , nav );
+
+// estilo general
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+}
+.body{
+    background-color:$black;
+}
+h2{
+    font-size: $h2;
+}
+p{
+    font-size: $p;
+}
+nav{
+    font-size: $nav;
+}
+
+// estilo footer 
+.redes{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family:'Poppins', sans-serif;
+    color: $white;
+}
+.icons_footer{
+    text-decoration: none;
+}
+// estilo header index
+.header__fondo{
+     display: flex;
+     width:100%;
+     background-image: url(../Assests/headerIndex.jpg);
+     background-position:top;
+     font-family:'Poppins', sans-serif;
+}
+// estilo section index
+.section__div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: $padding;
+    width: 100%;
+}
+.section__div__div--h2{
+    font-family: 'Bebas Neue', cursive;
+    color:$white;
+    text-align: center;
+    padding-top: 1rem;
+}
+.section__div__div--parrafo{
+    font-family:'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+    color: $white;
+    padding: 1rem;
+}
+.section__div__div--img{
+    border-radius: 15rem;
+}
+@media (max-width: 576px) {
+    .section__div__div--img{
+        width: 300px;
+    }
+    }
+// estilo header nosotros
+.header__fondoNosotros{
+    display: flex;
+    width:100%;
+    background-image: url(../Assests/headerNosotros.jpg);
+    background-position:center;
+    font-family:'Poppins', sans-serif;
+}
+// estilo header menu
+.header__fondoMenu{
+    @extend.header__fondoNosotros;
+    background-image: url(/assets/headerMenu.jpg);
+}
+// estilo section menu
+.body_menu{
+    background-image: url("../Assests/fondoMenu.jpg");
+}
+.menu_precios{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.menu_lista{
+    height: 85rem;
+    width: 90%;
+    text-align: center;
+    color: $white;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+.lista_precios{
+    box-shadow: 1000px;
+    border-radius: 20px;
+}
+@media (max-width: 750px) and (min-width: 300px) {
+    .lista_precios{
+       width: 350px;
+       height: 550px;
+    }
+    }
+.menu_espaciado{
+    padding: $padding;
+}
+.sectionMenu__div__div--parrafoMenu{
+    font-family:'Poppins', sans-serif;
+    border-radius: 25px;
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+    text-shadow: 5rem;
+    background-color: rgb(223, 183, 5);
+    font-weight: normal;
+    text-align: center;
+}
+.misCartas{
+    border-radius: 50px;
+}
+.img-card{
+    border-radius: 350px;
+}
+.card-title{
+    font-family:'Poppins', sans-serif;
+    font-size: 3rem;
+    border-radius: 50px;
+    color: $yellow;
+}
+.card-text{
+    font-family:'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem;  
+    color: $white;
+    border-radius: 20px;
+}
+// estilo header contactos
+
+.header__fondoBoxes{
+    @extend.header__fondo;
+    background-image: url(../Assests/headerBoxes.jpg);
+}
+// estilo section boxes
+
+.codigoQr{
+    border-radius: 30px;
+}
+// estilo header contactos
+
+.header__fondoContacto{
+    @extend.header__fondo;
+    background-image: url(../Assests/headerContacto.jpg);
+}
+// estilo section contacto
+.tituloContacto{
+    font-family: 'Bebas Neue', cursive;
+    color:$white;
+    text-align: center;
+    padding: 1rem;
+}
+.parrafoContacto{
+        font-family:'Poppins', sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        color: $yellow;
+        padding: 1rem;
+    } 
+.contactoFinal{
+    display: flex;
+    justify-content: center;
+    border-radius: 200px;
+    padding: $padding;
+}
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-family:'Poppins', sans-serif;
+    font-size: 1.25rem;
+}
+@media (max-width: 750px) and (min-width: 300px) {
+    .form-row{
+       width: 250px !important;
+    }
+    }
+.form-row{
+    display:flex;
+    flex-wrap:wrap ;
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: left;
+    width: 500px;
+}
+.form-control{
+    font-size: 1.5rem;
+}
+.form-group{
+    font-family:'Poppins', sans-serif;
+    font-weight: lighter;
+    font-size: 3rem;
+}
+.form-newsletter{
+    font-size: 1.6rem;
+    color: $yellow;
+}
+.form-img{
+    display: flex;
+    justify-content: center;
+}
+.form-img{
+    img{
+        border-radius: 250px;
+        padding: $padding;
+    }
+}
+.whatsappLogo{
+    margin-left: 635px;
+}
+// estilo section contacto
+
+.copy{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    font-family:'Poppins', sans-serif;
+    color: $white;}
