@@ -41,119 +41,62 @@
                     <a class="nav-link" href="boxes.html">Boxes</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    <a class="nav-link" href="contacto.html">Arma tu propia box</a>
                 </li>
               </ul>
             </div>
           </nav> 
     </header>
-    <!-- Inicio de section -->
-    <section class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 col-xs-12">
-              <h2 class="tituloContacto">Realizá tu pedido</h2>
-              <p class="parrafoContacto"> Próxima fecha de entrega : 1 de Septiembre</p>
-          </div>
+<!-- Inicio de section -->          
+<section>
+    <div class="contenedor">
+        <h1 class="titulo">Ingredientes disponibles</h1>
+    </div>
+    <main  class="contenedor">
+        <div class="contenedor-ingredientes">
+            
         </div>
-    </section>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 col-xs-12">
-                <div class="form">
-                    <form method="post">
-                        <div class="form-row">
-                            <div class="col">
-                                <input id="nombre_cliente" type="text" class="form-control" placeholder="Nombre">
-                            </div>
-                            <div class="col">
-                                <input id="apellido_cliente" type="text" class="form-control" placeholder="Apellido">
-                            </div>
+        <h2 class="titulo">Mis ingredientes elegidos</h2>
+        <div class="listado-favoritos">
+
+        </div>
+    </main>
+</section>
+<section class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-xs-12">
+          <h2 class="tituloContacto">Realizá tu pedido</h2>
+          <p class="parrafoContacto"> Próxima fecha de entrega : 1 de Septiembre</p>
+      </div>
+    </div>
+</section>
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <div class="form">
+                <form method="post">
+                    <div class="form-row">
+                        <div class="col">
+                            <input id="nombre_cliente" type="text" class="form-control" placeholder="Nombre">
                         </div>
-                        <br>
-                        <div class="form-group">
-                            <input id="email_cliente" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                        <div class="col">
+                            <input id="apellido_cliente" type="text" class="form-control" placeholder="Apellido">
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-xs-12">
-                                <p class="parrafoContacto"> ¿Cual box te gustaria pedirnos? </p>
-                            </div>
-                          </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="boconna" name="extras[]" type="checkbox" class="custom-control-input" id="boconna">
-                            <label class="custom-control-label form-newsletter" for="boconna">Boconna</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input id="email_cliente" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-warning btn-lg">Enviar pedido</button>
                         </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="prepizzita" name="extras[]" type="checkbox" class="custom-control-input" id="prepizzita">
-                            <label class="custom-control-label form-newsletter" for="prepizzita">Pre Pizzita</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="blue" name="extras[]" type="checkbox" class="custom-control-input" id="blue">
-                            <label class="custom-control-label form-newsletter" for="blue">Blue</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="pancetona" name="extras[]" type="checkbox" class="custom-control-input" id="pancetona">
-                            <label class="custom-control-label form-newsletter" for="pancetona">Pancetona</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="sinvueltas" name="extras[]" type="checkbox" class="custom-control-input" id="sinvueltas">
-                            <label class="custom-control-label form-newsletter" for="sinvueltas">Sin Vueltas</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="serrana" name="extras[]" type="checkbox" class="custom-control-input" id="serrana">
-                            <label class="custom-control-label form-newsletter" for="serrana">Serrana</label>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-xs-12">
-                                <p class="parrafoContacto"> Extras </p>
-                            </div>
-                          </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="doble Muzza" name="extras[]" type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label form-newsletter" for="customCheck1">Doble Muzzarella</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="extra salsa" name="extras[]" type="checkbox" class="custom-control-input" id="customCheck2">
-                            <label class="custom-control-label form-newsletter" for="customCheck2">Extra salsa</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="bacon" name="extras[]" type="checkbox" class="custom-control-input" id="customCheck3">
-                            <label class="custom-control-label form-newsletter" for="customCheck3">Bacon</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input value="huevo" name="extras[]" type="checkbox" class="custom-control-input" id="customCheck4">
-                            <label class="custom-control-label form-newsletter" for="customCheck4">Huevo</label>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <button onclick="recogerDatos()" type="button" class="btn btn-warning btn-lg">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
-    <section class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 col-xs-12">
-              <h2 class="tituloContacto">Contactanos</h2>
-              <p class="parrafoContacto"> 11 6023-4826</p>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-xs-12">
-                <a class="nav-link active" href="https://api.whatsapp.com/send?phone=541160234826&text=Buenas%20tardes"></a><img class="d-block mx-auto" src="/assets/logo/whatsapp.png" alt="logo"></a><br>
-            </div>
-        </div>  
-    </section>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 col-xs-12">
-                <h2 class="section__div__div--h2">Nuestra ubicación</h2>
-                <iframe data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13131.844783203927!2d-58.427896776266024!3d-34.630420887238685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccba995405047%3A0x39601bb2d0a0ef8f!2sBoedo%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1619805846333!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
+    </div> 
+</section>   
 <!-- Inicio de footer -->
 <footer class="container-fluid">
     <div class="row">
