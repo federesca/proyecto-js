@@ -57,6 +57,8 @@ let ingredientesFavoritos = [];
 const contenedorIngredientes = document.querySelector(".contenedor-ingredientes");
 const contenedorFavoritos = document.querySelector(".listado-favoritos");
 
+obtenerDatosDeLocalStorage();
+
 document.addEventListener('DOMContentLoaded', () => {
 
     mostrarIngredientes();
@@ -100,6 +102,9 @@ function agregarAFavorito(id) {
 
     ingredientesFavoritos.push(ingredienteFavorito);
 
+    localStorage.setItem("ingredientesFavoritos", JSON.stringify(ingredientesFavoritos));
+
+    console.log(ingredientesFavoritos);
     mostrarIngredientesFavoritos(ingredientesFavoritos);
 }
 
@@ -122,3 +127,14 @@ function limpiarHTML() {
     contenedorFavoritos.innerHTML = "";
 }
 
+function obtenerDatosDeLocalStorage() {
+    const localIngredientesFavoritos = localStorage.getItem('ingredientesFavoritos');
+
+    if (localIngredientesFavoritos) {
+        const array = JSON.parse(localIngredientesFavoritos);
+
+        ingredientesFavoritos = array;
+
+        mostrarIngredientesFavoritos(array);
+    }
+}
